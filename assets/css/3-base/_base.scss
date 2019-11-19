@@ -1,0 +1,344 @@
+/*----------------------------------------
+------------------------------------------
+	## GENERAL
+------------------------------------------
+----------------------------------------*/
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+*:focus, *:hover, * {
+	outline: none;
+}
+
+.cf::after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "";
+	clear: both;
+	height: 0;
+}
+
+.no-padding {
+	padding-left: 0!important;
+	padding-right: 0!important;
+}
+
+.wow {
+	visibility: hidden;
+}
+
+.vcenter {
+	display: flex;
+	align-items: center;
+}
+
+.valign {
+	display: flex;
+	flex-direction: row;
+
+	> [class^="col-"],
+	> [class*=" col-"] {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+} // END VALIGN
+
+.vertical-text {
+	writing-mode: vertical-rl;
+	&.flip {
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+}// END VERTICAL TEXT
+
+.fancybox-slide > * {
+	padding: 0;
+}
+
+.svg {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+} // END SVG
+
+section {
+	position: relative;
+	overflow: hidden;
+}
+
+a {
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	outline: none!important;
+}
+
+img, svg {
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	max-width: 100%;
+}
+
+button {
+	outline: none!important;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+textarea, input {
+	-webkit-appearance: none;
+}
+
+textarea {
+	resize: vertical;
+}
+
+form label[for="sendContact"],
+form label[for="sendNews"] {
+	cursor: pointer;
+}
+
+h1, h2, h3, h4, p {
+	margin: 0;
+}
+
+body.no-scroll {
+	overflow: hidden!important;
+}
+
+br {
+	line-height: inherit;
+}
+
+a {
+	display: inline-block;
+	position: relative;
+	padding: 0 5px;
+	color: $dark-beige;
+	@include transition(all 300ms ease);
+
+	&.link {
+		text-transform: uppercase;
+		font-weight: 800;
+		letter-spacing: 1px;
+	}
+
+}
+
+.block { display: inline-block; }
+.rellax { display: inline-block; }
+
+.transparent {
+	opacity: 0;
+}
+
+.center-img {
+	position: relative;
+	width: 100%;
+	padding-bottom: 50%;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		height: 100%;
+		width: auto;
+		max-width: none;
+	}
+
+}
+
+.hidden-sm {
+	@media #{$mq-sm-max} {
+		display: none;
+	}
+}
+
+.visible-sm {
+	display: none;
+	@media #{$mq-sm-max} {
+		display: block;
+	}
+}
+
+section.section {
+	position: relative;
+
+	&.dark {
+		background-color: $almost-white;
+	}
+
+	.section-title {
+		padding-bottom: 30px;
+		font-size: 100px;
+		line-height: .7;
+		font-weight: 800;
+
+		@media #{$mq-md-max} {
+			font-size: 65px;
+		}
+
+		@media #{$mq-sm-max} {
+			font-size: 45px;
+		}
+
+		span {
+			padding-left: 115px;
+			display: block;
+
+			@media #{$mq-sm-max} {
+				padding-left: 80px;
+			}
+
+		}
+
+	}
+
+}
+
+.video-container {
+position: relative;
+padding-bottom: 47.5%;
+padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+
+/*----------------------------------------
+------------------------------------------
+	## SLICK
+------------------------------------------
+----------------------------------------*/
+
+.slick-triple, .slick-single {
+
+	.slick-arrow-wrapper {
+		position: absolute;
+		top: 50%;
+		margin-top: -24px;
+		font-size: 12px;
+		color: $dark-beige;
+		cursor: pointer;
+		z-index: 99;
+		@include transition(all 500ms ease);
+
+		&.prev {
+			left: 0;
+			padding: 15px 35px 15px 5px;
+
+			&:after {
+				content: '';
+				display: block;
+				width: 25px;
+				border-bottom: 3px solid;
+				position: relative;
+				top: -9px;
+				left: 4px;
+			}
+
+			&:hover {
+				margin-left: -10px;
+			}
+
+		}
+
+		&.next {
+			right: 0;
+			padding: 15px 5px 15px 35px;
+
+			&:after {
+				content: '';
+				display: block;
+				width: 25px;
+				border-bottom: 3px solid;
+				position: relative;
+				top: -9px;
+				right: 18px;
+			}
+
+			&:hover {
+				margin-right: -10px;
+			}
+
+		}
+
+	} //.slick-arrow-wrapper
+
+	.slick-dots {
+		margin: 10px 0;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 10px;
+			text-indent: 10px;
+			background-color: $white;
+			opacity: .6;
+			overflow: hidden;
+
+			button {
+				opacity: 0;
+			}
+			
+			&+li {
+				margin-left: 10px;
+			}
+
+			&.slick-active {
+				opacity: 1;
+			}
+
+		}
+
+	}//.slick-dots
+
+}
+
+/*----------------------------------------
+------------------------------------------
+	## SAFARI / IPAD / MOBILE ADJUSTMENTS
+------------------------------------------
+----------------------------------------*/
+
+// FIX COL WRONG BREAK
+body.ipad,
+body.safari {
+	.row {
+		> div {
+			margin-left: -2px;
+			margin-right: -2px;
+		} // END > DIV
+	} // END ROW
+} // END IPAD
+
+body:before {
+	display: none !important;
+}

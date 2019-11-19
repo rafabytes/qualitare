@@ -1,0 +1,109 @@
+/*----------------------------------------
+------------------------------------------
+	## CONTAINER SIZES
+------------------------------------------
+----------------------------------------*/
+
+.container {
+	max-width: 1280px;
+	@media #{$mq-xl-max} { max-width: 90%; }
+	@media #{$mq-md-max} { max-width: 95%; }
+	@media #{$mq-xs-max} { max-width: 100%; }
+} // END CONTAINER
+
+.container-big {
+	max-width: 1600px;
+	@media #{$mq-xxl-max} { max-width: 90%; }
+	@media #{$mq-md-max} { max-width: 95%; }
+	@media #{$mq-xs-max} { max-width: 100%; }
+} // END CONTAINER BIG
+
+/*----------------------------------------
+------------------------------------------
+	## FONT FAMILIES / WEIGHTS
+------------------------------------------
+----------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+$open: 'Open Sans', sans-serif;
+
+$regular: 400;
+$bold: 700;
+
+/*----------------------------------------
+------------------------------------------
+	## COLORS
+------------------------------------------
+----------------------------------------*/
+
+$white: 		#fff;
+$almost-white: 	#f9f9f9;
+$black:			#000;
+$almost-black:	#505050;
+$grey:			#a0a0a0;
+$beige: 		#f2ebe7;
+$dark-beige: 	#e9cec3;
+
+
+/*----------------------------------------
+------------------------------------------
+	## FONT SIZES
+------------------------------------------
+----------------------------------------*/
+
+.title-big {
+	font-size: 70px;
+	line-height: 120%;
+	font-weight: $regular;
+
+	@media #{$mq-xxl-max} {
+		font-size: 65px;
+	}
+
+	@media #{$mq-xl-max} {
+		font-size: 60px;
+	}
+
+	@media #{$mq-lg-max} {
+		font-size: 50px;
+	}
+
+	@media #{$mq-md-max} {
+		font-size: 40px;
+	}
+
+	@media #{$mq-sm-max} {
+		font-size: 30px;
+	}
+
+	strong, b {
+		font-family: inherit;
+		font-weight: $bold;
+	} // END STRONG / B
+} // END TITLE BIG
+
+.text-medium {
+	font-size: 20px;
+	line-height: 200%;
+	font-weight: $regular;
+
+	@media #{$mq-lg-max} {
+		font-size: 18px;
+	}
+
+	@media #{$mq-sm-max} {
+		font-size: 16px;
+	}
+
+	strong, b {
+		font-family: inherit;
+		font-weight: $bold;
+	} // END STRONG / B
+} // END TEXT MEDIUM
+
+/*----------------------------------------
+------------------------------------------
+	## BUTTONS
+------------------------------------------
+----------------------------------------*/

@@ -1,0 +1,10 @@
+@import 'breakpoints';
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+@import 'base';
+@import 'header';
+@import 'footer';
+
+//import pages
+@import 'pages/home';

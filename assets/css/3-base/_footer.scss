@@ -1,0 +1,160 @@
+/*----------------------------------------
+------------------------------------------
+	## FOOTER
+------------------------------------------
+----------------------------------------*/
+
+section#social {
+	margin-bottom: -40px;
+	z-index: 2;
+
+	@media #{$mq-sm-max} {
+		margin-bottom: -20px;
+		font-size: 24px;
+	}
+
+	.content-float {
+		position: relative;
+		right: -8%;
+		@media #{$mq-md-max} {
+			right: -4%;
+		}
+	}
+
+	.vertical-text {
+		top: 0;
+		left: -80px;
+		position: absolute;
+		font-size: 24px;
+		color: $almost-black;
+
+		@media #{$mq-lg-max} {
+			left: -50px;
+		}
+		
+		&:after {
+			content: '';
+			display: inline-block;
+			margin-top: 220px;
+			margin-right: -50px;
+			height: 90px;
+			border-right: 1px solid $grey;
+			
+			@media #{$mq-lg-max} {
+				display: none;
+			}
+
+		}
+
+	}
+
+	.social-nav {
+		display: block;
+		margin-top: 50px;
+		margin-bottom: 50px;
+
+		@media #{$mq-sm-max} {
+			text-align: center;
+		}
+
+		li {
+			display: inline-block;
+
+			&+li {
+				margin-left: 30px;
+
+				@media #{$mq-xxs-max} {
+					margin-left: 15px;
+				}
+
+			}
+
+			h4 {
+				letter-spacing: 10px;
+				text-transform: uppercase;
+
+				@media #{$mq-xxs-max} {
+					display: none;
+					letter-spacing: 5px;
+				}
+
+			}
+
+		}
+
+	}
+
+	.instagram-roulette {
+		margin-bottom: -50px;
+
+		@media #{$mq-sm-max} {
+			display: none;
+		}
+
+		.item {
+			float: left;
+			width: 22%;
+			margin-right: 2%;
+			padding-bottom: 22%;
+		}
+
+	}
+
+}
+
+footer#site-footer {
+	overflow: hidden;
+
+	.content-float {
+		padding: 100px 180px 60px;
+		position: relative;
+		right: -2%;
+		border-left: 1px solid $dark-beige;
+		border-top: 1px solid $dark-beige;
+
+		@media #{$mq-md-max} {
+			right: 0;
+			border-left: none;
+			padding: 100px 20px 60px;
+		}
+
+		@media #{$mq-sm-max} {
+			padding: 30px 0;
+		}
+
+		.container {
+			&>div {
+				float: left;
+				width: 50%;
+
+				@media #{$mq-sm-max} {
+					width: 100%;
+				}
+
+			}
+
+			.left {
+				color: $dark-beige;
+				text-align: left;
+				
+				@media #{$mq-sm-max} {
+					text-align: center;
+					margin-bottom: 25px;
+				}
+
+			}
+
+			.right {
+				text-align: right;
+
+				@media #{$mq-sm-max} {
+					text-align: center;
+					margin-bottom: 25px;
+				}
+
+			}
+
+		}
+	}
+
+}

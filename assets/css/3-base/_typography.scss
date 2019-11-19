@@ -1,0 +1,106 @@
+/*----------------------------------------
+------------------------------------------
+	## WEIGHTS
+------------------------------------------
+----------------------------------------*/
+
+$regular: 400;
+$bold: 700;
+
+/*----------------------------------------
+------------------------------------------
+	## import fonts
+------------------------------------------
+----------------------------------------*/
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../fonts/BebasNeue-Regular.woff2') format('woff2'),
+	url('../fonts/BebasNeue-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+/*----------------------------------------
+------------------------------------------
+	## FONT FAMILIES
+------------------------------------------
+----------------------------------------*/
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Bebas Neue', sans-serif;
+	font-weight: 500;
+}
+
+/*----------------------------------------
+------------------------------------------
+	## FONT COLORS
+------------------------------------------
+----------------------------------------*/
+
+body {
+	color: #333;
+}
+
+h1, h2, h3 {
+	color: $almost-black;
+}
+
+.text-beige {
+	color: $beige;
+}
+
+/*----------------------------------------
+------------------------------------------
+	## FONT SIZES
+------------------------------------------
+----------------------------------------*/
+
+body {
+	font-size: 14px;
+
+	@media #{$mq-sm-max} {
+		font-size: 13px;
+	}
+
+}
+
+h1 {
+	font-size: 70px;
+
+	@media #{$mq-md-max} {
+		font-size: 48px;
+	}
+
+	@media #{$mq-sm-max} {
+		font-size: 24px;
+	}
+
+}
+
+h2 {
+	font-size: 42px;
+
+	@media #{$mq-md-max} {
+		font-size: 32px;
+	}
+
+	@media #{$mq-sm-max} {
+		font-size: 24px;
+	}
+
+}
+
+p {
+	line-height: 1.5;
+}
